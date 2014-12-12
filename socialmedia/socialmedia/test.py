@@ -1,0 +1,1 @@
+rules = (Rule (SgmlLinkExtractor(allow=("index\d00\.html", ),restrict_xpaths=('//p[@class="nextpage"]',)), callback="parse_items", follow= True),)
