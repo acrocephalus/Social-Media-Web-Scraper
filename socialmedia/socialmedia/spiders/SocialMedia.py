@@ -7,10 +7,10 @@ from scrapy.contrib.linkextractors.sgml import SgmlLinkExtractor
 
 class MySpider(CrawlSpider):
     name = 'smm'
-    allowed_domains = ['*']
+    allowed_domains = []
     start_urls = ['http://en.wikipedia.org/wiki/Social_media']
     rules = (
-             Rule(SgmlLinkExtractor(allow=()), callback="parse_items", follow= True),
+            Rule(SgmlLinkExtractor(deny=('play.google','amazon','bit.ly','wikimedia','mediawiki')), callback="parse_items", follow= True),
              )
     def parse_items(self, response):
         items = []
