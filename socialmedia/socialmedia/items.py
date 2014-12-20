@@ -14,4 +14,6 @@ class SocialMediaItem(Item):
     link = Field()
     description = Field()
     webKW = Field()
+    SourceDomain = Field()
+    TargetDomain = Field()
     pass
