@@ -12,7 +12,7 @@ BOT_NAME = 'socialmedia'
 
 SPIDER_MODULES = ['socialmedia.spiders']
 NEWSPIDER_MODULE = 'socialmedia.spiders'
-DEPTH_LIMIT = 10
+DEPTH_LIMIT = 100
 DOWNLOAD_DELAY = 0.50
 RETRY_ENABLED = False
 CONCURRENT_REQUESTS = 600

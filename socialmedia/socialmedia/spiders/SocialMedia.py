@@ -16,7 +16,7 @@ class MySpider(CrawlSpider):
     rules = (
             Rule(SgmlLinkExtractor(deny=('statcounter.com/','wikipedia','play.google','books.google.com','github.com','amazon','bit.ly','wikimedia','mediawiki','creativecommons.org',
                                          'extensions.joomla.org','contact','about','careers','jobs','itunes.apple','apple','microsoft','clevnet.bibliocommons.com',
-                                         'feedproxy.google.com','feeds.feedburner.com')), callback="parse_items", follow= True),
+                                         'feedproxy.google.com','feeds.feedburner.com','enable.java')), callback="parse_items", follow= True),
              )
     def parse_items(self, response):
         items = []
