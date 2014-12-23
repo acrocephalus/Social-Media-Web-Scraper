@@ -9,7 +9,7 @@ from urlparse import urlparse
 class MySpider(CrawlSpider):
     name = 'smm'
     allowed_domains = []
-    f = open("E:\Usuarios\Daniel\GitHub\SocialMedia-Web-Scraper\socialmedia\Links.txt")
+    f = open("/home/acrocephalus/GitHub/Social-Media-Web-Scraper/socialmedia/Links.txt")
     start_urls = [url.strip() for url in f.readlines()]
     f.close()
     rules = (
