@@ -12,13 +12,17 @@ BOT_NAME = 'socialmedia'
 
 SPIDER_MODULES = ['socialmedia.spiders']
 NEWSPIDER_MODULE = 'socialmedia.spiders'
-DEPTH_LIMIT = 100
+DEPTH_LIMIT = 50
 DOWNLOAD_DELAY = 0.50
 RETRY_ENABLED = False
 CONCURRENT_REQUESTS = 600
 COOKIES_ENABLED = False
 AUTOTHROTTLE_ENABLED = True
 REDIRECT_MAX_TIMES = 3
+LOG_LEVEL = 'INFO'
+REDIRECT_ENABLED = False
+AJAXCRAWL_ENABLED = True
+ITEM_PIPELINES = ['socialmedia.pipelines.JsonWithEncodingPipeline']
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'socialmedia (+http://www.yourdomain.com)'

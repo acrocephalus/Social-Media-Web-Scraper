@@ -12,8 +12,7 @@ class SocialMediaItem(Item):
     SourceTitle = Field()
     TargetTitle = Field()
     link = Field()
-    description = Field()
-    webKW = Field()
+    #description = Field()
     SourceDomain = Field()
     TargetDomain = Field()
     pass
