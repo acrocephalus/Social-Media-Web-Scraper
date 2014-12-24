@@ -2,8 +2,8 @@ import json
 import pandas as pd
 data = []
 with open('/home/acrocephalus/GitHub/Social-Media-Web-Scraper/socialmedia/scraped_data_utf8.json') as f:
-   for line in f: 
-      data.append(json.loads(line))
+    for line in f: 
+        data.append(json.loads(line))
 df = pd.DataFrame(data)
 
 #Discard inbound links by comparing the source & target domains
@@ -35,5 +35,6 @@ edgesFile[2] = Id
 Type = ["Directed"] * len(Id)
 edgesFile[3] = Type
 edgesFile[4] = Weights
+edgesFile.columns = ['Source','Target','Id','Type','Weights']
 
 print "I have scraped "+ str(nodesFile.shape[0]) + " websites and " + str(len(Weights)) + " links."
