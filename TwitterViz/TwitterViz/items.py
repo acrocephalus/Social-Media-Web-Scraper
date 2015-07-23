@@ -11,7 +11,8 @@ from scrapy.item import Item, Field
 class TwitterVizItem(Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    User = Field()
+    Follows = Field()
+    Follower = Field()
     FriendURL = Field()
     Profile = Field()
     pass
